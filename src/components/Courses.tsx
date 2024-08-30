@@ -1,36 +1,85 @@
 import CourseItem from '@/components/CourseItem';
-import { Carousel, Flex } from 'antd';
+import { Flex } from 'antd';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+export const listCourses = [
+  {
+    title: 'SƠ CẤP 1',
+    desc: 'Phù hợp với người mới bắt đầu học tiếng Hàn, giúp nắm vững nền tảng ngữ pháp, từ vựng cơ bản và phát triển kỹ năng giao tiếp cơ bản.',
+    img: '/courses/socap1.jpg',
+  },
+  {
+    title: 'SƠ CẤP 2',
+    desc: 'Dành cho người đã có nền tảng tiếng Hàn cơ bản, giúp củng cố ngữ pháp và mở rộng từ vựng.',
+    img: '/courses/socap2.jpg',
+  },
+  {
+    title: 'TRUNG CẤP 3',
+    desc: 'Tập trung nâng cao ngữ pháp và kỹ năng nghe nói, tăng cường vốn từ vựng và rèn luyện kỹ năng viết.',
+    img: '/courses/trungcap3.jpg',
+  },
+  {
+    title: 'GIAO TIẾP',
+    desc: 'Giúp học viên tự tin giao tiếp ở trình độ cao, tạo nền tảng vững chắc cho các kỳ thi TOPIK.',
+    img: '/courses/giaotiep.jpg',
+  },
+  {
+    title: 'TOPIK II CẤP ĐỘ 3,4,5,6',
+    desc: 'Giúp học viên làm chủ cấu trúc đề thi và các mẹo làm bài hiệu quả, phát triển toàn diện các kỹ năng đọc, nghe, viết.',
+    img: '/courses/topik2.jpg',
+  },
+  {
+    title: 'LỚP CHUYÊN SÂU 1-1',
+    desc: 'Phù hợp với học viên muốn học theo lộ trình cá nhân riêng biệt, giúp chinh phục mục tiêu đề ra trong thời gian ngắn nhất.',
+    img: '/courses/chuyensau11.jpg',
+  },
+];
 const Courses = () => {
   return (
-    <div className='bg-white p-10'>
+    <div className='home-courses bg-white'>
       <Flex vertical justify='center' align='center' gap={16}>
-        <div className='title uppercase text-4xl font-semibold text-red-900 text-center w-full'>khóa học tiếng hàn</div>
-        <Flex gap={12}>
-          <div className='py-1 px-3 cursor-pointer rounded-xl border-solid border-2 border-blue-400 text-blue-900 font-medium'>
-            Khóa học Offline
-          </div>
-          <div className='py-1 px-3 cursor-pointer rounded-xl border-solid border-2 border-blue-400 bg-blue-400 text-white font-medium'>
-            Khóa học Online
-          </div>
-        </Flex>
+        <div className='title uppercase text-2xl font-semibold text-red-900 text-center w-full mb-6'>
+          khóa học tiếng hàn
+        </div>
       </Flex>
-      <Carousel autoplay autoplaySpeed={2000}>
-        <div className='w-full !flex justify-center'>
-          <div className='w-5/6 mt-8 flex gap-10'>
-            <CourseItem />
-            <CourseItem isActive={true} />
-            <CourseItem />
-          </div>
-        </div>
-        <div className='w-full !flex justify-center'>
-          <div className='w-5/6 mt-8 flex gap-10'>
-            <CourseItem />
-            <CourseItem isActive={true} />
-            <CourseItem />
-          </div>
-        </div>
-      </Carousel>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={20}
+        navigation={true}
+        pagination={{
+          clickable: true,
+        }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: true,
+        }}
+        loop={true}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Autoplay, Pagination, Navigation]}
+        className='courses-swiper'
+      >
+        {listCourses.map((course) => {
+          return (
+            <SwiperSlide key={course.title}>
+              <CourseItem {...course} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </div>
   );
 };

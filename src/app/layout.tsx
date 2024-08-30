@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import '../styles/app.scss';
 import Header from '@/components/Header';
+import 'antd/dist/reset.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,9 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={inter.className + ' relative'}>
         <Header />
-        <div style={{ minHeight: '100vh' }}>{children}</div>
+        <div className='mt-[-18px]' style={{ height: 'calc(100vh - 66px)' }}>
+          {children}
+        </div>
       </body>
     </html>
   );

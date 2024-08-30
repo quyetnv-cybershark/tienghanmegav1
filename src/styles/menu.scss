@@ -1,0 +1,17 @@
+.header-layout {
+  .ant-menu-item-selected {
+    font-weight: 600;
+  }
+  .ant-menu-submenu-horizontal {
+    &.ant-menu-submenu-selected {
+      .ant-menu-submenu-title {
+        color: #c51a08;
+        font-weight: 700;
+      }
+    }
+  }
+}
+.ant-menu-item-selected {
+  color: #c51a08 !important;
+  font-weight: 700;
+}

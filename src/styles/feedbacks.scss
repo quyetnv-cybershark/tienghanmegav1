@@ -1,0 +1,35 @@
+.feedbacks-page {
+  .swiper-wrapper {
+    cursor: default !important;
+  }
+  .feedbacks-swiper {
+    position: static;
+    .swiper-pagination {
+      position: static;
+      margin-top: 10px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 28px;
+      height: 28px;
+      background-color: $primary-color;
+      border-radius: 50%;
+      opacity: 0.4;
+      transition: all 0.5s;
+      &:hover {
+        opacity: 0.8;
+      }
+      &::after {
+        font-size: 12px;
+        color: white;
+        font-weight: 800;
+      }
+    }
+    .swiper-button-next {
+      right: -32px;
+    }
+    .swiper-button-prev {
+      left: -32px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.home-form {
+  .ant-form-item {
+    .ant-form-item-control {
+      min-width: 100%;
+    }
+  }
+  .ant-form-item-required {
+    &::before {
+      display: none !important;
+    }
+  }
+}
