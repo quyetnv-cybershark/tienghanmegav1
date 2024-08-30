@@ -1,48 +1,80 @@
 'use client';
 
 import type { MenuProps } from 'antd';
-import { Menu } from 'antd';
-import { useState } from 'react';
+import { ConfigProvider, Flex, Menu } from 'antd';
+import { usePathname, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 type MenuItem = Required<MenuProps>['items'][number];
 
 const Header = () => {
+  const router = useRouter();
+  const pathname = usePathname()?.substring(1);
+
   const items: MenuItem[] = [
     {
-      label: 'Trang chủ',
-      key: 'home',
+      label: 'TRANG CHỦ',
+      key: '/home',
     },
     {
-      label: 'Giới thiệu',
-      key: 'intro',
+      label: 'GIỚI THIỆU',
+      key: '/intro',
     },
     {
-      label: 'Khóa học',
-      key: 'SubMenu',
+      label: 'KHÓA HỌC',
+      key: '/courses',
       children: [
-        {
-          type: 'group',
-          label: 'Item 2',
-          children: [
-            { label: 'Option 3', key: 'setting:3' },
-            { label: 'Option 4', key: 'setting:4' },
-          ],
-        },
+        { label: 'Sơ cấp 1', key: '/courses/so-cap-1' },
+        { label: 'Sơ cấp 2', key: '/courses/so-cap-2' },
+        { label: 'Trung cấp 3', key: '/courses/trung-cap-3' },
+        { label: 'Giao tiếp', key: '/courses/giao-tiep' },
+        { label: 'TOPIK II cấp 3,4,5,6', key: '/courses/topik-2-cap-3-4-5-6' },
+        { label: 'Chuyên sâu 1-1', key: '/courses/chuyen-sau' },
       ],
     },
     {
       label: 'Liên hệ',
-      key: 'contact',
+      key: '/contact',
     },
   ];
-
-  const [current, setCurrent] = useState('mail');
+  const [current, setCurrent] = useState('');
+  useEffect(() => {
+    setCurrent('/' + pathname);
+  }, [pathname]);
 
   const onClick: MenuProps['onClick'] = (e) => {
-    console.log('click ', e);
-    setCurrent(e.key);
+    router.push(e.key);
   };
 
-  return <Menu onClick={onClick} selectedKeys={[current]} mode='horizontal' items={items} />;
+  return (
+    <ConfigProvider
+      theme={{
+        components: {
+          Menu: {
+            itemHoverColor: '#c51a08',
+            horizontalItemSelectedColor: '#c51a08',
+            colorTextBase: '#c51a08',
+          },
+        },
+        token: {
+          fontSize: 16,
+        },
+      }}
+    >
+      <Flex justify='flex-end' className='px-8 pb-3 bg-white'>
+        {/* <div>
+          <Image alt='' src='/logoRed.png' height={64} width='auto' preview={false} />
+        </div> */}
+        <Menu
+          onClick={onClick}
+          selectedKeys={[current]}
+          mode='horizontal'
+          items={items}
+          className='header-layout pt-2 pr-8 justify-end'
+        />
+      </Flex>
+      ;
+    </ConfigProvider>
+  );
 };
 
 export default Header;
