@@ -10,3 +10,16 @@ $primary-color: #c51a08;
     opacity: 1;
   }
 }
+
+.ant-select-open {
+  border-color: #dc2626;
+}
+
+.ant-form-item {
+  div {
+    box-shadow: none;
+  }
+  input {
+    outline: none;
+  }
+}

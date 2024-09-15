@@ -46,7 +46,7 @@ const TeacherItem = ({ teacherName, certificate, teacherIntro, descs, teacherImg
         <Flex vertical gap={6}>
           {descs?.map((desc) => (
             <Flex gap={8} align='flex-start' key={desc}>
-              <GoDotFill className='text-gray-900 text-base' />
+              <GoDotFill className='text-gray-900 text-sm' />
               <div className='text-[14px] text-gray-700 leading-5'>{desc}</div>
             </Flex>
           ))}
