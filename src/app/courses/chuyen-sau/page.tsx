@@ -3,7 +3,7 @@ import BaseCourse, { BaseCourseProps } from '@/app/courses/BaseCourse';
 const ChuyenSaupage = () => {
   const ChuyenSaupageData: BaseCourseProps = {
     imgUrl: '/course-page/chuyensau.png',
-    title: 'Chuyến sâu 1-1',
+    title: 'Chuyên sâu 1-1',
     output: 'cam kết đầu ra tương tự các khóa cùng trình độ',
     overviews: [
       {

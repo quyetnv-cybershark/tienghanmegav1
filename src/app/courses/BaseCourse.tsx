@@ -1,6 +1,7 @@
 import React from 'react';
-import { Flex, Image } from 'antd';
+import { Flex } from 'antd';
 import { GoDotFill } from 'react-icons/go';
+import Image from 'next/image';
 export interface BaseCourseProps {
   imgUrl: string;
   title: string;
@@ -15,10 +16,10 @@ export interface BaseCourseProps {
 }
 const BaseCourse = ({ imgUrl, title, overviews, output }: BaseCourseProps) => {
   return (
-    <Flex style={{ height: 'calc(100vh - 66px)' }} className='bg-white overflow-hidden'>
-      <div className='w-2/5 absolute top-0 bottom-0 right-0 left-0'>
+    <Flex style={{ height: 'calc(100vh - 66px)' }} className='bg-background overflow-hidden'>
+      <div className='w-[30%] absolute top-0 bottom-0 right-0 left-0'>
         <div
-          className='absolute top-0 bottom-0 right-0 left-0'
+          className='absolute top-0 bottom-0 right-0 left-0 z-50'
           style={{
             backgroundImage: `url(${imgUrl})`,
             backgroundSize: 'cover',
@@ -27,22 +28,27 @@ const BaseCourse = ({ imgUrl, title, overviews, output }: BaseCourseProps) => {
           }}
         ></div>
       </div>
-      <div className='w-2/5'></div>
-      <Flex vertical justify='center' className='flex-1 ml-10 relative'>
-        <div className='content w-4/5 relative h-fit'>
-          <div className='title text-primaryColor text-6xl font-bold'>{title}</div>
+      <div className='w-[30%]'></div>
+      <Flex vertical justify='flex-start' className='flex-1 ml-20 mt-12 relative'>
+        <Flex vertical gap={20} className='content w-4/5 relative h-fit max-w-[60%]'>
+          <div className='title text-primaryColor text-7xl font-[900]'>{title}</div>
           {overviews.map((item) => {
             return (
               <Flex vertical gap={8} key={item.title}>
-                <div className='text-yellow-500 font-bold text-3xl mt-6 mb-2'>{item.title}</div>
+                <div className='text-[#f19808] font-[900] text-3xl mt-6 mb-2 uppercase'>{item.title}</div>
                 {item.overviewsDescs.map((overviewsDesc) => {
                   return (
                     <Flex key={overviewsDesc.title} gap={8}>
-                      <GoDotFill className='mt-[3px] text-primaryColor text-lg' />
-                      <div className='text-black text-lg'>
-                        {overviewsDesc.title && <span className='font-bold'>{overviewsDesc.title}</span>}{' '}
-                        {overviewsDesc.desc}
-                      </div>
+                      <GoDotFill className='mt-[3px] text-primaryColor text-lg w-5' />
+                      <Flex gap={8} className='text-black text-lg'>
+                        {overviewsDesc.title ? (
+                          <span className='font-bold text-justify'>
+                            {overviewsDesc.title} {overviewsDesc.desc}
+                          </span>
+                        ) : (
+                          <span className='font-bold text-justify'>{overviewsDesc.desc}</span>
+                        )}
+                      </Flex>
                     </Flex>
                   );
                 })}
@@ -50,16 +56,16 @@ const BaseCourse = ({ imgUrl, title, overviews, output }: BaseCourseProps) => {
             );
           })}
 
-          <div className='text-yellow-500 font-bold text-3xl mt-6 mb-2'>CHẤT LƯỢNG ĐẦU RA</div>
+          <div className='text-[#f19808] font-[900] text-3xl mt-6 mb-2 uppercase'>CHẤT LƯỢNG ĐẦU RA</div>
           <Flex gap={8}>
             <GoDotFill className='mt-[3px] text-primaryColor text-lg' />
-            <div className='text-primaryColor uppercase font-bold text-xl'>{output}</div>
+            <div className='text-primaryColor uppercase font-[800] text-2xl'>{output}</div>
           </Flex>
-          <div className='absolute top-0 -right-[450px]'>
-            <Image alt='' src='/course-page/ring.png' height={400} width={400} preview={false}></Image>
+          <div className='absolute top-0 -right-[85%]'>
+            <Image alt='' src='/course-page/ring.png' height={400} width={400}></Image>
           </div>
-        </div>
-        <div className='register-btn uppercase bg-primaryColor w-fit font-bold text-white text-2xl px-8 py-4 rounded-full absolute bottom-5 right-5'>
+        </Flex>
+        <div className='register-btn uppercase bg-primaryColor w-fit font-bold text-white text-2xl px-12 py-6 rounded-full absolute bottom-8 right-8 cursor-pointer'>
           đăng ký ngay
         </div>
       </Flex>

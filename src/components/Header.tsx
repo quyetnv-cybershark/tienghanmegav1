@@ -4,6 +4,7 @@ import type { MenuProps } from 'antd';
 import { ConfigProvider, Flex, Menu } from 'antd';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { FaCaretDown } from 'react-icons/fa';
 type MenuItem = Required<MenuProps>['items'][number];
 
 const Header = () => {
@@ -16,11 +17,12 @@ const Header = () => {
       key: '/home',
     },
     {
-      label: 'GIỚI THIỆU',
-      key: '/intro',
-    },
-    {
-      label: 'KHÓA HỌC',
+      label: (
+        <Flex gap={6} align='center'>
+          <span>KHÓA HỌC</span>
+          <FaCaretDown />
+        </Flex>
+      ),
       key: '/courses',
       children: [
         { label: 'Sơ cấp 1', key: '/courses/so-cap-1' },
@@ -32,8 +34,8 @@ const Header = () => {
       ],
     },
     {
-      label: 'Liên hệ',
-      key: '/contact',
+      label: 'CỘNG ĐỒNG',
+      key: '/social',
     },
   ];
   const [current, setCurrent] = useState('');
@@ -60,16 +62,13 @@ const Header = () => {
         },
       }}
     >
-      <Flex justify='flex-end' className='px-8 pb-3 bg-white'>
-        {/* <div>
-          <Image alt='' src='/logoRed.png' height={64} width='auto' preview={false} />
-        </div> */}
+      <Flex justify='flex-end' className='px-8 pb-3 bg-background fixed top-0 right-0 left-0 z-50'>
         <Menu
           onClick={onClick}
           selectedKeys={[current]}
           mode='horizontal'
           items={items}
-          className='header-layout pt-2 pr-8 justify-end'
+          className='header-layout pt-2 pr-8 justify-end bg-background font-[500]'
         />
       </Flex>
       ;

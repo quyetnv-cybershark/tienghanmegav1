@@ -42,9 +42,7 @@ const Teachers = () => {
   ];
   return (
     <Flex vertical className='home-teachers'>
-      <div className='title uppercase text-2xl font-semibold text-red-900 text-center w-full mb-6'>
-        Đội ngũ giảng viên
-      </div>
+      <div className='title uppercase text-3xl font-[700] text-red-900 text-center w-full mb-6'>Đội ngũ giảng viên</div>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}

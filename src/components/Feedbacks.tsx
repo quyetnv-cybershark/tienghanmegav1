@@ -147,8 +147,8 @@ const Feedbacks = () => {
   ];
   return (
     <div className='feedbacks-page'>
-      <div className='title uppercase text-2xl mb-6 font-semibold text-red-900 text-center w-full'>
-        Cảm nhân của học viên
+      <div className='title uppercase text-3xl mb-6 font-[700] text-red-900 text-center w-full'>
+        Cảm nhận của học viên
       </div>
       <div className='relative'>
         <Swiper

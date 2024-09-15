@@ -1,1 +1,12 @@
 $primary-color: #c51a08;
+
+@keyframes moveUp {
+  from {
+    bottom: -220px;
+    opacity: 0;
+  }
+  to {
+    bottom: -136px;
+    opacity: 1;
+  }
+}

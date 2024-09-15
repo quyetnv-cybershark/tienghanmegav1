@@ -4,7 +4,7 @@ const SoCapHai = () => {
   const ChuyenSaupageData: BaseCourseProps = {
     imgUrl: '/course-page/socap2.png',
     title: 'Sơ Cấp 2',
-    output: '140/300 TOPIK I',
+    output: '140/200 TOPIK I',
     overviews: [
       {
         title: 'Tổng quan khóa học',
