@@ -29,7 +29,7 @@ const BaseCourse = ({ imgUrl, title, overviews, output }: BaseCourseProps) => {
         ></div>
       </div>
       <div className='w-[30%]'></div>
-      <Flex vertical justify='flex-start' className='flex-1 ml-20 mt-12 relative'>
+      <Flex vertical justify='flex-start' className='flex-1 ml-20 mt-12 relative overflow-y-scroll overflow-x-hidden'>
         <Flex vertical gap={20} className='content w-4/5 relative h-fit max-w-[60%]'>
           <div className='title text-primaryColor text-7xl font-[900]'>{title}</div>
           {overviews.map((item) => {
@@ -62,7 +62,7 @@ const BaseCourse = ({ imgUrl, title, overviews, output }: BaseCourseProps) => {
             <div className='text-primaryColor uppercase font-[800] text-2xl'>{output}</div>
           </Flex>
           <div className='absolute top-0 -right-[85%]'>
-            <Image alt='' src='/course-page/ring.png' height={400} width={400}></Image>
+            <Image unoptimized alt='' src='/course-page/ring.png' height={400} width={400}></Image>
           </div>
         </Flex>
         <div className='register-btn uppercase bg-primaryColor w-fit font-bold text-white text-2xl px-12 py-6 rounded-full absolute bottom-8 right-8 cursor-pointer'>
