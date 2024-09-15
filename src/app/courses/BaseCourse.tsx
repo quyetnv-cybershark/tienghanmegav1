@@ -62,7 +62,7 @@ const BaseCourse = ({ imgUrl, title, overviews, output }: BaseCourseProps) => {
             <div className='text-primaryColor uppercase font-[800] text-2xl'>{output}</div>
           </Flex>
           <div className='absolute top-0 -right-[85%]'>
-            <Image alt='' src='/course-page/ring.png' height={400} width={400}></Image>
+            <Image unoptimized alt='' src='/course-page/ring.png' height={400} width={400}></Image>
           </div>
         </Flex>
         <div className='register-btn uppercase bg-primaryColor w-fit font-bold text-white text-2xl px-12 py-6 rounded-full absolute bottom-8 right-8 cursor-pointer'>
