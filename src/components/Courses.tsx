@@ -37,9 +37,9 @@ export const listCourses = [
 ];
 const Courses = () => {
   return (
-    <div className='home-courses bg-white'>
+    <div className='home-courses bg-background'>
       <Flex vertical justify='center' align='center' gap={16}>
-        <div className='title uppercase text-2xl font-semibold text-red-900 text-center w-full mb-6'>
+        <div className='title uppercase text-3xl font-[700] text-red-900 text-center w-full mb-6'>
           khóa học tiếng hàn
         </div>
       </Flex>
@@ -74,7 +74,7 @@ const Courses = () => {
       >
         {listCourses.map((course) => {
           return (
-            <SwiperSlide key={course.title}>
+            <SwiperSlide key={course.title} className='bg-white'>
               <CourseItem {...course} />
             </SwiperSlide>
           );

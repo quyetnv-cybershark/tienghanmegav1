@@ -11,11 +11,11 @@ const GiaoTiep = () => {
         overviewsDescs: [
           {
             title: 'Đối tượng học:',
-            desc: ' Người đã hoàn thành sơ cấp 1-2 muốn nâng cao kỹ năng nghe nói.',
+            desc: 'Người đã hoàn thành sơ cấp 1-2 muốn nâng cao kỹ năng nghe nói.',
           },
           {
             title: 'Thời gian học:',
-            desc: '1H30P',
+            desc: '90 Phút',
           },
           {
             title: 'Ca học:',

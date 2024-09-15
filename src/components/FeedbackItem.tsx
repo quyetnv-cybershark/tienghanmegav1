@@ -11,7 +11,14 @@ const FeedbackItem = ({ studentName, course, feedback, studentImg }: FeedbackIte
   return (
     <Flex vertical gap={8}>
       <Flex vertical gap={4}>
-        <Image alt='' src={studentImg} width={50} height={50} className='rounded-full object-cover'></Image>
+        <Image
+          alt=''
+          src={studentImg}
+          width={50}
+          height={50}
+          className='rounded-full object-cover'
+          preview={false}
+        ></Image>
         <div className='font-extrabold text-gray-900 text-sm'>{studentName}</div>
         <div className='font-normal text-gray-500 text-xs'>{course}</div>
       </Flex>

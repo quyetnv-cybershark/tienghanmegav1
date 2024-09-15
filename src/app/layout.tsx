@@ -4,6 +4,7 @@ import './globals.css';
 import '../styles/app.scss';
 import Header from '@/components/Header';
 import 'antd/dist/reset.css';
+import { RootStyleRegistry } from '@/app/RootStyleRegistry';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,12 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className + ' relative'}>
-        <Header />
-        <div className='mt-[-18px]' style={{ height: 'calc(100vh - 66px)' }}>
-          {children}
-        </div>
-      </body>
+      <RootStyleRegistry>
+        <body className={inter.className + ' relative'}>
+          <Header />
+          <div className='mt-[47px]' style={{ height: 'calc(100vh - 66px)' }}>
+            {children}
+          </div>
+        </body>
+      </RootStyleRegistry>
     </html>
   );
 }
