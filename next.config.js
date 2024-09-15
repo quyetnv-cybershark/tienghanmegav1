@@ -1,6 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  basePath: '/personal-portfolio',
-};
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   basePath: '/personal-portfolio',
+// };
 
-module.exports = nextConfig;
+// module.exports = nextConfig;
