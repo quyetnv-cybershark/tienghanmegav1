@@ -14,9 +14,9 @@ const CourseItem = ({ title, desc, img }: CourseItemProps) => {
       gap={12}
       className='course-item border-2 border-solid border-gray-300 h-fit overflow-hidden relative w-full hover:scale-105'
     >
-      <div className='absolute top-1 left-1 bg-red-500 text-white font-medium uppercase px-4 py-0.5 z-10 rounded-xl cursor-pointer'>
+      {/* <div className='absolute top-3 left-1 bg-red-500 text-white font-medium uppercase px-4 py-0.5 z-10 rounded-xl cursor-pointer'>
         khóa học
-      </div>
+      </div> */}
       <div className='img-wraper'>
         <Image alt='' src={img} />
       </div>

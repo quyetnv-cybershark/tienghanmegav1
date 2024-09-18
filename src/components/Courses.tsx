@@ -7,17 +7,17 @@ export const listCourses = [
   {
     title: 'SƠ CẤP 1',
     desc: 'Phù hợp với người mới bắt đầu học tiếng Hàn, giúp nắm vững nền tảng ngữ pháp, từ vựng cơ bản và phát triển kỹ năng giao tiếp cơ bản.',
-    img: '/courses/socap1.jpg',
+    img: '/courses/socap1.png',
   },
   {
     title: 'SƠ CẤP 2',
     desc: 'Dành cho người đã có nền tảng tiếng Hàn cơ bản, giúp củng cố ngữ pháp và mở rộng từ vựng.',
-    img: '/courses/socap2.jpg',
+    img: '/courses/socap2.png',
   },
   {
     title: 'TRUNG CẤP 3',
     desc: 'Tập trung nâng cao ngữ pháp và kỹ năng nghe nói, tăng cường vốn từ vựng và rèn luyện kỹ năng viết.',
-    img: '/courses/trungcap3.jpg',
+    img: '/courses/trungcap3.png',
   },
   {
     title: 'GIAO TIẾP',
@@ -32,7 +32,7 @@ export const listCourses = [
   {
     title: 'LỚP CHUYÊN SÂU 1-1',
     desc: 'Phù hợp với học viên muốn học theo lộ trình cá nhân riêng biệt, giúp chinh phục mục tiêu đề ra trong thời gian ngắn nhất.',
-    img: '/courses/chuyensau11.jpg',
+    img: '/courses/chuyensau11.png',
   },
 ];
 const Courses = () => {

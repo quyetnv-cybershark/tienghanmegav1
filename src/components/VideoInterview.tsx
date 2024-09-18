@@ -27,7 +27,7 @@ const VideoInterview: React.FC = () => {
       <div className='title uppercase text-3xl font-[700] text-red-900 text-center w-full mb-6'>ĐIỂM TIN MEGA</div>
       <Flex align='center' justify='center' gap={40} className='w-4/5'>
         <ReactPlayer
-          url='https://youtu.be/bN2cpgQzX74'
+          url='https://www.youtube.com/watch?v=ASwBG8T2VRM'
           controls
           width='50%'
           height='600px'
@@ -36,7 +36,7 @@ const VideoInterview: React.FC = () => {
           loop={true}
         />
         <ReactPlayer
-          url='https://www.youtube.com/watch?v=mSEbvKYqPuI'
+          url='https://www.youtube.com/watch?v=teAKfwpJYJw'
           controls
           width='50%'
           height='600px'

@@ -20,7 +20,7 @@ const FeedbackItem = ({ studentName, course, feedback, studentImg }: FeedbackIte
           preview={false}
         ></Image>
         <div className='font-extrabold text-gray-900 text-sm'>{studentName}</div>
-        <div className='font-normal text-gray-500 text-xs'>{course}</div>
+        <div className='font-normal text-primaryColor text-xs'>{course}</div>
       </Flex>
       <Tooltip title={feedback}>
         <div className='font-normal text-gray-500 text-xs line-clamp-3 h-[3.6rem] leading-[1.2rem]'>{feedback}</div>

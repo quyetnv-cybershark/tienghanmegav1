@@ -2,6 +2,7 @@
 
 import Banner from '@/components/Banner';
 import Courses from '@/components/Courses';
+import FacebookChat from '@/components/FacebookChat';
 import Feedbacks from '@/components/Feedbacks';
 import Footer from '@/components/Footer';
 import FormRegister from '@/components/FormRegister';
@@ -39,6 +40,7 @@ export default function HomePage() {
         </Flex>
         <FormRegister />
       </Flex>
+      <FacebookChat />
       <Footer />
     </Flex>
   );

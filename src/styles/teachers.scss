@@ -1,6 +1,6 @@
 .home-teachers {
   .swiper {
-    width: 100%;
+    // width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -8,7 +8,8 @@
   .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 300px;
+    // width: 300px;
+    height: auto;
   }
 
   .swiper-slide img {

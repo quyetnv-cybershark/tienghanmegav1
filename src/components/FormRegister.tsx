@@ -4,36 +4,6 @@ import React from 'react';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { MdLocationPin } from 'react-icons/md';
 
-// type FieldType = {
-//   name?: string;
-//   email?: string;
-// };
-
-// const handleSubmit = async (formData: any) => {
-//   const response = await fetch('/api/send-email', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(formData),
-//   });
-//   console.log('response :>> ', response);
-//   if (response.ok) {
-//     alert('Contract form sent successfully!');
-//   } else {
-//     alert('Failed to send contract form.');
-//   }
-// };
-
-// const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
-//   console.log('Success:', values);
-//   handleSubmit(values);
-// };
-
-// const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = (errorInfo) => {
-//   console.log('Failed:', errorInfo);
-// };
-
 const FormRegister: React.FC = () => {
   return (
     <Flex vertical align='center' className='w-full home-form'>
@@ -44,14 +14,6 @@ const FormRegister: React.FC = () => {
         className='w-full h-[70vh] pt-8 px-12 pb-0 relative bg-[#CB2624] overflow-hidden'
         align='center'
         justify='center'
-        // style={{
-        //   backgroundImage: "url('/registerBg.png')",
-        //   backgroundSize: 'cover', // Optional: To cover the entire element
-        //   backgroundPosition: 'center', // Optional: To center the image
-        //   backgroundRepeat: 'no-repeat',
-        // }}
-        // background:
-        //   ' linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(254, 227, 122, 0.9) 50%, rgba(197, 26, 8, 0.9) 100%)',
       >
         <Image alt='' src='/iconRegister1.png' width={80} height={80} className='absolute top-3 right-3' />
         <Image alt='' src='/iconRegister1.png' width={80} height={80} className='absolute top-3 left-3' />
@@ -65,8 +27,6 @@ const FormRegister: React.FC = () => {
           wrapperCol={{ span: 16 }}
           style={{ maxWidth: 600 }}
           initialValues={{ remember: true }}
-          // onFinish={onFinish}
-          // onFinishFailed={onFinishFailed}
           autoComplete='off'
         >
           <Form.Item
@@ -130,14 +90,16 @@ const FormRegister: React.FC = () => {
             </Button>
           </Flex>
         </Form>
-        <div className='relative h-full w-[600px] overflow-hidden mr-[20%]'>
+        <div className='relative h-full w-[600px] mr-[20%]'>
           <Image alt='' src='/iconRegister1.png' width={80} height={80} className='absolute bottom-[120px] left-8' />
           <Image
             alt=''
             src='/imgForm.svg'
-            width={80}
-            height={80}
-            className='absolute bottom-[-50%] z-10 w-[300%] h-[200%]'
+            width={800}
+            height={800}
+            className='scale-150 absolute bottom-0 -right-12 z-20'
+            // objectFit='cover'
+            // className='absolute bottom-[-50%] z-10 w-[100%] h-[100%]'
           />
         </div>
 
