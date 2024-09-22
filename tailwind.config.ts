@@ -14,7 +14,7 @@ const config: Config = {
       },
       colors: {
         primaryColor: '#c51a08',
-        subColor: '#fee37a',
+        subColor: '#f19808',
         background: '#fffaf0',
       },
     },

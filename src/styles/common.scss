@@ -22,7 +22,7 @@ $primary-color: #c51a08;
 }
 
 ::-webkit-scrollbar {
-  width: 12px; /* Độ rộng của thanh cuộn */
+  width: 14px; /* Độ rộng của thanh cuộn */
   height: 12px; /* Độ cao của thanh cuộn ngang */
 }
 
@@ -41,4 +41,18 @@ $primary-color: #c51a08;
 /* Khi hover vào thanh kéo */
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555;
+}
+.ant-notification-notice-message,
+.ant-notification-notice-description {
+  margin-left: 64px !important;
+  margin-bottom: 0 !important;
+  width: max-content;
+  margin-right: 40px;
+}
+
+:where(.css-dev-only-do-not-override-m4timi).ant-notification
+  .ant-notification-notice-wrapper
+  .ant-notification-notice {
+  width: fit-content !important;
+  padding: 12px 16px !important;
 }

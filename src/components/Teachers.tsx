@@ -31,7 +31,7 @@ const Teachers = () => {
     {
       teacherName: 'Park YoungJin',
       teacherIntro: 'Giáo viên Hàn Quốc',
-      teacherImg: '/teachers/GIÁO VIÊN Park YoungJin.png',
+      teacherImg: '/teachers/GIÁO VIÊN Park YoungJin.svg',
       certificate: 'Chứng chỉ giao tiếp tiếng Việt C1',
       descs: [
         '3 năm kinh nghiệm đào tạo giao tiếp Hàn Ngữ tại Việt Nam',

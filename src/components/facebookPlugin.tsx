@@ -16,7 +16,7 @@ const FacebookPlugin = () => {
     // ></div>
     <Image
       alt=''
-      src='/social-page/facebook.jpg'
+      src='/social-page/facebook.svg'
       width={400}
       height={300}
       className='cursor-pointer rounded-lg'

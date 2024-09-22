@@ -48,14 +48,14 @@ export default function Home() {
           >
             <Link href='/home' className='blob-btn text-[48px] !rounded-full !font-[800]'>
               Chinh phục ngay
-              <span className='blob-btn__inner'>
+              <div className='blob-btn__inner'>
                 <span className='blob-btn__blobs'>
                   <span className='blob-btn__blob'></span>
                   <span className='blob-btn__blob'></span>
                   <span className='blob-btn__blob'></span>
                   <span className='blob-btn__blob'></span>
                 </span>
-              </span>
+              </div>
             </Link>
             <br />
 

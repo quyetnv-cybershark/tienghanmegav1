@@ -2,6 +2,7 @@ import React from 'react';
 import { Flex } from 'antd';
 import { GoDotFill } from 'react-icons/go';
 import Image from 'next/image';
+import Link from 'next/link';
 export interface BaseCourseProps {
   imgUrl: string;
   title: string;
@@ -66,7 +67,9 @@ const BaseCourse = ({ imgUrl, title, overviews, output }: BaseCourseProps) => {
           </div>
         </Flex>
         <div className='register-btn uppercase bg-primaryColor w-fit font-bold text-white text-2xl px-12 py-6 rounded-full absolute bottom-8 right-8 cursor-pointer'>
-          đăng ký ngay
+          <Link href='/home#registerSection' className='text-white hover:text-subColor'>
+            ĐĂNG KÝ NGAY
+          </Link>
         </div>
       </Flex>
     </Flex>

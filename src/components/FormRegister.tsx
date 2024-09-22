@@ -15,9 +15,27 @@ const FormRegister: React.FC = () => {
         align='center'
         justify='center'
       >
-        <Image alt='' src='/iconRegister1.png' width={80} height={80} className='absolute top-3 right-3' />
-        <Image alt='' src='/iconRegister1.png' width={80} height={80} className='absolute top-3 left-3' />
-        <Image alt='' src='/iconRegister2.png' width={24} height={24} className='absolute bottom-[120px] right-16' />
+        <Image
+          alt=''
+          src='/contract-form/footer-vang.svg'
+          width={240}
+          height={240}
+          className='absolute -top-10 -right-[30px]'
+        />
+        <Image
+          alt=''
+          src='/contract-form/footer-sao.svg'
+          width={240}
+          height={240}
+          className='absolute -top-10 -left-[40px]'
+        />
+        <Image
+          alt=''
+          src='/contract-form/footer-nui.svg'
+          width={240}
+          height={240}
+          className='absolute bottom-[20%] -left-[40px]'
+        />
 
         <Form
           className='w-3/5  border-solid border-2 border-primaryColor rounded-2xl p-6 bg-white mb-8'
@@ -92,15 +110,23 @@ const FormRegister: React.FC = () => {
         </Form>
         <div className='relative h-full w-[600px] mr-[20%]'>
           <Image alt='' src='/iconRegister1.png' width={80} height={80} className='absolute bottom-[120px] left-8' />
-          <Image
-            alt=''
-            src='/imgForm.svg'
-            width={800}
-            height={800}
-            className='scale-150 absolute bottom-0 -right-12 z-20'
-            // objectFit='cover'
-            // className='absolute bottom-[-50%] z-10 w-[100%] h-[100%]'
-          />
+          <div className=' absolute bottom-0 -right-12 z-20'>
+            <Image
+              alt=''
+              src='/contract-form/footer-topik.svg'
+              width={420}
+              height={420}
+              className='absolute -top-[136px] -right-[125px]'
+            />
+            <Image
+              alt=''
+              src='/contract-form/footer-giao-tiep.svg'
+              width={320}
+              height={320}
+              className='absolute -top-[80px] -left-[60px]'
+            />
+            <Image alt='' src='/imgForm.svg' width={800} height={800} className='scale-125' />
+          </div>
         </div>
 
         <Flex
@@ -119,10 +145,10 @@ const FormRegister: React.FC = () => {
         >
           <Image
             alt=''
-            src='/contract-form/Asset5.svg'
-            height={120}
-            width={120}
-            className='absolute top-16 left-[240px]'
+            src='/contract-form/footer-nui-do.svg'
+            height={240}
+            width={240}
+            className='absolute -top-[24px] left-[180px]'
           ></Image>
           <Flex vertical gap={24} className='max-w-[35%] ml-[20%] mt-[25%] z-20 text-xl text-black font-bold'>
             <Flex vertical className='w-full'>
