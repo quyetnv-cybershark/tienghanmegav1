@@ -13,13 +13,13 @@ const Header = () => {
 
   const items: MenuItem[] = [
     {
-      label: 'TRANG CHỦ',
+      label: <span className='text-[18px] font-bold'>TRANG CHỦ</span>,
       key: '/home',
     },
     {
       label: (
         <Flex gap={6} align='center'>
-          <span>KHÓA HỌC</span>
+          <span className='text-[18px] font-bold'>KHÓA HỌC</span>
           <FaCaretDown />
         </Flex>
       ),
@@ -34,7 +34,7 @@ const Header = () => {
       ],
     },
     {
-      label: 'CỘNG ĐỒNG',
+      label: <span className='text-[18px] font-bold'>CỘNG ĐỒNG</span>,
       key: '/social',
     },
   ];

@@ -2,7 +2,7 @@ import BaseCourse, { BaseCourseProps } from '@/app/courses/BaseCourse';
 
 const SoCapHai = () => {
   const ChuyenSaupageData: BaseCourseProps = {
-    imgUrl: '/course-page/socap2.png',
+    imgUrl: '/course-page/socap2.svg',
     title: 'Sơ Cấp 2',
     output: '140/200 TOPIK I',
     overviews: [

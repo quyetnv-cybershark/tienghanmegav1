@@ -15,33 +15,6 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 
 export default function HomePage() {
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     const randomStudent = listStudentRegisters[Math.floor(Math.random() * listStudentRegisters.length)];
-  //     openNotification({
-  //       pauseOnHover: false,
-  //       message: <span className='font-bold'>{randomStudent.title}</span>,
-  //       icon: (
-  //         <Flex align='center' justify='center'>
-  //           <Image
-  //             alt={randomStudent.imgName}
-  //             src={`/student-register/${randomStudent.imgName}`}
-  //             width={46}
-  //             height={46}
-  //             objectFit='cover'
-  //             className='rounded-full'
-  //             style={{ objectFit: 'cover', width: '46px', height: '46px', marginRight: '80px' }}
-  //           ></Image>
-  //         </Flex>
-  //       ),
-  //       description: <span className='text-green-600'>Đăng ký thành công</span>,
-  //       duration: 2,
-  //     });
-  //   }, 10000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
-
   useEffect(() => {
     const showNotification = () => {
       const randomStudent = listStudentRegisters[Math.floor(Math.random() * listStudentRegisters.length)];

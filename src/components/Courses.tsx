@@ -1,4 +1,5 @@
 import CourseItem from '@/components/CourseItem';
+import HomeTitle from '@/components/HomeTitle';
 import { Flex } from 'antd';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -27,7 +28,7 @@ export const listCourses = [
   {
     title: 'TOPIK II CẤP ĐỘ 3,4,5,6',
     desc: 'Giúp học viên làm chủ cấu trúc đề thi và các mẹo làm bài hiệu quả, phát triển toàn diện các kỹ năng đọc, nghe, viết.',
-    img: '/courses/topik2.jpg',
+    img: '/courses/topik2.svg',
   },
   {
     title: 'LỚP CHUYÊN SÂU 1-1',
@@ -39,9 +40,7 @@ const Courses = () => {
   return (
     <div className='home-courses bg-background'>
       <Flex vertical justify='center' align='center' gap={16}>
-        <div className='title uppercase text-3xl font-[700] text-red-900 text-center w-full mb-6'>
-          khóa học tiếng hàn
-        </div>
+        <HomeTitle text='khóa học tiếng hàn' />
       </Flex>
       <Swiper
         slidesPerView={1}

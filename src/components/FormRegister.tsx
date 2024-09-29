@@ -1,3 +1,4 @@
+import HomeTitle from '@/components/HomeTitle';
 import { Button, Flex, Form, Input, Select } from 'antd';
 import Image from 'next/image';
 import React from 'react';
@@ -7,9 +8,7 @@ import { MdLocationPin } from 'react-icons/md';
 const FormRegister: React.FC = () => {
   return (
     <Flex vertical align='center' className='w-full home-form'>
-      <div className='title uppercase text-3xl font-[700] text-red-900 text-center w-full mb-6'>
-        Đăng ký nhận tư vấn miễn phí
-      </div>
+      <HomeTitle text=' Đăng ký nhận tư vấn miễn phí' />
       <Flex
         className='w-full h-[70vh] pt-8 px-12 pb-0 relative bg-[#CB2624] overflow-hidden'
         align='center'

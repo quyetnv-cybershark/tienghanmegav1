@@ -1,3 +1,4 @@
+import HomeTitle from '@/components/HomeTitle';
 import TeacherItem from '@/components/TeacherItem';
 import { Flex } from 'antd';
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
@@ -42,7 +43,9 @@ const Teachers = () => {
   ];
   return (
     <Flex vertical className='home-teachers'>
-      <div className='title uppercase text-3xl font-[700] text-red-900 text-center w-full mb-6'>Đội ngũ giảng viên</div>
+      <div className='-mb-10'>
+        <HomeTitle text='Đội ngũ giảng viên' />
+      </div>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}

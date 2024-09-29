@@ -1,3 +1,4 @@
+import HomeTitle from '@/components/HomeTitle';
 import { Flex } from 'antd';
 import React from 'react';
 import ReactPlayer from 'react-player';
@@ -24,7 +25,7 @@ const VideoInterview: React.FC = () => {
 
   return (
     <Flex vertical align='center' justify='center'>
-      <div className='title uppercase text-3xl font-[700] text-red-900 text-center w-full mb-6'>ĐIỂM TIN MEGA</div>
+      <HomeTitle text='ĐIỂM TIN MEGA' />
       <Flex align='center' justify='center' gap={40} className='w-4/5'>
         <ReactPlayer
           url='https://www.youtube.com/watch?v=mSEbvKYqPuI&list=PLmS4UjBHusH_6wzYdyl36oJZZ3MoH1R9L'

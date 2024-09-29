@@ -30,6 +30,7 @@ const SocialPage = () => {
       <div className='title text-primaryColor text-6xl font-[800] uppercase -mt-[100px]'>
         Thực chiến tiếng hàn tại mega
       </div>
+
       <Flex className='w-4/5 h-max -mt-[48px]' gap={36} align='center'>
         {listSocials.map((social) => (
           <Flex vertical align='center' gap={24} className='w-1/3 h-full' key={social.socialName}>
@@ -38,11 +39,11 @@ const SocialPage = () => {
               <Image alt='' src={social.imgUrl} width={400} height={600} className='rounded-lg'></Image>
               <div className='font-[600] text-xl text-black text-center'>{social.desc}</div>
             </Flex>
-            <div className='uppercase text-xl font-[600] px-12 py-2 rounded-xl bg-primaryColor text-white cursor-pointer hover:opacity-80 transition-all duration-300'>
-              <Link href={social.openLink} className='text-white' target='_blank' rel='noopener noreferrer'>
+            <Link href={social.openLink} className='text-white' target='_blank' rel='noopener noreferrer'>
+              <div className='uppercase text-xl font-[600] px-12 py-2 rounded-xl bg-primaryColor text-white cursor-pointer hover:opacity-80 transition-all duration-300'>
                 tham gia
-              </Link>
-            </div>
+              </div>
+            </Link>
           </Flex>
         ))}
       </Flex>

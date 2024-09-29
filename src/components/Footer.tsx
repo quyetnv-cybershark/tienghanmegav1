@@ -1,4 +1,3 @@
-import FacebookPlugin from '@/components/facebookPlugin';
 import { Flex } from 'antd';
 import clsx from 'clsx';
 import Link from 'next/link';
@@ -123,33 +122,48 @@ const Footer = () => {
   ];
   return (
     <Flex gap={40} className='bg-white w-full px-[5%] text-black py-16'>
-      <div id='fb-root'></div>
-      {listFooter.map((footerItem) => (
-        <Flex gap={12} vertical key={footerItem.title} className='w-1/4'>
-          <div className='uppercase text-2xl pb-[6px] border-solid border-b-2 border-primaryColor font-[600]'>
-            {footerItem.title}
-          </div>
-          <Flex vertical gap={8}>
-            {footerItem.children.map((item, index) => (
-              <Flex
-                key={footerItem.title + index.toString()}
-                gap={6}
-                className='cursor-pointer transition duration-300 group'
-              >
-                <span className='group-hover:text-primaryColor transition duration-300'>{item.icon}</span>
-                <span
-                  className={clsx('group-hover:text-primaryColor transition duration-300', {
-                    capitalize: footerItem.key !== 1,
-                  })}
+      <Flex gap={40} className='flex-1'>
+        {listFooter.map((footerItem) => (
+          <Flex gap={12} vertical key={footerItem.title} className='w-1/3'>
+            <div className='uppercase text-2xl pb-[6px] border-solid border-b-2 border-primaryColor font-[600]'>
+              {footerItem.title}
+            </div>
+            <Flex vertical gap={8}>
+              {footerItem.children.map((item, index) => (
+                <Flex
+                  key={footerItem.title + index.toString()}
+                  gap={6}
+                  className='cursor-pointer transition duration-300 group'
                 >
-                  {item.subTitle}
-                </span>
-              </Flex>
-            ))}
+                  <span className='group-hover:text-primaryColor transition duration-300'>{item.icon}</span>
+                  <span
+                    className={clsx('group-hover:text-primaryColor transition duration-300', {
+                      capitalize: footerItem.key !== 1,
+                    })}
+                  >
+                    {item.subTitle}
+                  </span>
+                </Flex>
+              ))}
+            </Flex>
           </Flex>
-        </Flex>
-      ))}
-      <FacebookPlugin />
+        ))}
+      </Flex>
+      <div className='w-[400px]'>
+        <iframe
+          src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftrungtamtienghanmega&tabs=timeline&width=400&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=368800916164136'
+          width='400'
+          height='200'
+          style={{
+            border: 'none',
+            overflow: 'hidden',
+          }}
+          scrolling='no'
+          frameborder='0'
+          allowfullscreen='true'
+          allow='autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share'
+        ></iframe>
+      </div>
     </Flex>
   );
 };

@@ -16,10 +16,10 @@ export default function Banner() {
         pagination={{
           clickable: true,
         }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: true,
-        }}
+        // autoplay={{
+        //   delay: 3000,
+        //   disableOnInteraction: true,
+        // }}
         modules={[Autoplay, Pagination]}
         className='banner-swiper'
       >
@@ -27,7 +27,7 @@ export default function Banner() {
           <Image alt='Banner Image 1' src='/mega-banner1.jpg' preview={false} />
         </SwiperSlide>
         <SwiperSlide>
-          <Image alt='Banner Image' src='/mega-banner.jpg' preview={false} />
+          <Image alt='Banner Image' src='/mega-banner.svg' preview={false} />
         </SwiperSlide>
       </Swiper>
     </div>

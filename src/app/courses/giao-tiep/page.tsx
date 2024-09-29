@@ -2,7 +2,7 @@ import BaseCourse, { BaseCourseProps } from '@/app/courses/BaseCourse';
 
 const GiaoTiep = () => {
   const ChuyenSaupageData: BaseCourseProps = {
-    imgUrl: '/course-page/socap1.png',
+    imgUrl: '/course-page/giaotiep.svg',
     title: 'Giao Tiếp',
     output: 'Giao tiếp thành thạo các chủ đề cơ bản trong sinh hoạt',
     overviews: [

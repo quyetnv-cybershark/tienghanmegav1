@@ -1,4 +1,5 @@
 import FeedbackItem, { FeedbackItemProps } from '@/components/FeedbackItem';
+import HomeTitle from '@/components/HomeTitle';
 import { Keyboard, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -147,9 +148,7 @@ const Feedbacks = () => {
   ];
   return (
     <div className='feedbacks-page'>
-      <div className='title uppercase text-3xl mb-6 font-[700] text-red-900 text-center w-full'>
-        Cảm nhận của học viên
-      </div>
+      <HomeTitle text='Cảm nhận của học viên' />
       <div className='relative'>
         <Swiper
           slidesPerView={1}

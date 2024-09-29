@@ -5,7 +5,7 @@ import { GoDotFill } from 'react-icons/go';
 
 const ChuyenSaupage = () => {
   const ChuyenSaupageData: BaseCourseProps = {
-    imgUrl: '/course-page/chuyensau.png',
+    imgUrl: '/course-page/chuyensau.svg',
     title: 'Chuyên sâu 1-1',
     output: 'cam kết đầu ra tương tự các khóa cùng trình độ',
     overviews: [
