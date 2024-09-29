@@ -16,10 +16,10 @@ export default function Banner() {
         pagination={{
           clickable: true,
         }}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: true,
-        // }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: true,
+        }}
         modules={[Autoplay, Pagination]}
         className='banner-swiper'
       >
