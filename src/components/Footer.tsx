@@ -151,14 +151,14 @@ const Footer = () => {
       </Flex>
       <div className='w-[400px]'>
         <iframe
-          src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftrungtamtienghanmega&tabs=timeline&width=400&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=368800916164136'
-          width='400'
-          height='200'
+          src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftienghanmega%2F&tabs=timeline&width=460&height=240&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId'
+          width='460'
+          height='240'
           style={{
             border: 'none',
             overflow: 'hidden',
           }}
-          title='123'
+          title='123123'
           scrolling='no'
           frameBorder='0'
           allowFullScreen={true}
