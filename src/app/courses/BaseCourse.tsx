@@ -33,7 +33,7 @@ const BaseCourse = ({ imgUrl, title, overviews, output, hidedot = false }: BaseC
       <div className='w-[30%]'></div>
       <Flex vertical justify='flex-start' className='flex-1 ml-20 mt-12 relative overflow-y-scroll overflow-x-hidden'>
         <Flex vertical gap={20} className='content w-4/5 relative h-fit max-w-[60%]'>
-          <div className='title text-primaryColor text-7xl font-[900]'>{title}</div>
+          <div className='title text-primaryColor text-7xl font-[900] open-sans-bold'>{title}</div>
           {overviews.map((item) => {
             return (
               <Flex vertical gap={8} key={item.title}>
