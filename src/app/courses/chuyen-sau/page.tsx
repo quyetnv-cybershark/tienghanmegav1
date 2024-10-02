@@ -8,6 +8,7 @@ const ChuyenSaupage = () => {
     imgUrl: '/course-page/chuyensau.svg',
     title: 'Chuyên sâu 1-1',
     output: 'cam kết đầu ra tương tự các khóa cùng trình độ',
+    hidedot: true,
     overviews: [
       {
         title: 'Tổng quan khóa học',
@@ -52,7 +53,9 @@ const ChuyenSaupage = () => {
                 {item.overviewsDescs.map((overviewsDesc) => {
                   return (
                     <Flex key={overviewsDesc.title} gap={8}>
-                      <GoDotFill className='mt-[3px] text-primaryColor text-lg w-5' />
+                      <div>
+                        <GoDotFill className='mt-[3px] text-primaryColor text-lg w-5' />
+                      </div>
                       <Flex gap={8} className='text-black text-lg'>
                         {overviewsDesc.title ? (
                           <span className='font-bold text-justify'>
@@ -71,7 +74,7 @@ const ChuyenSaupage = () => {
 
           <div className='text-[#f19808] font-[900] text-3xl mt-6 mb-2 uppercase'>CHẤT LƯỢNG ĐẦU RA</div>
           <Flex gap={8}>
-            <GoDotFill className='mt-[3px] text-primaryColor text-lg' />
+            {!ChuyenSaupageData.hidedot && <GoDotFill className='mt-[3px] text-primaryColor text-lg' />}
             <div className='text-primaryColor uppercase font-[800] text-2xl'>{ChuyenSaupageData.output}</div>
           </Flex>
           <div className='absolute top-0 -right-[85%]'>

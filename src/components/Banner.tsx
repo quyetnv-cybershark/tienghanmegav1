@@ -3,8 +3,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Image } from 'antd';
 import { Autoplay, Pagination } from 'swiper/modules';
+import Image from 'next/image';
 
 export default function Banner() {
   return (
@@ -24,10 +24,26 @@ export default function Banner() {
         className='banner-swiper'
       >
         <SwiperSlide>
-          <Image alt='Banner Image 1' src='/mega-banner1.jpg' preview={false} />
+          <Image
+            alt='Banner Image 1'
+            src='/mega-banner1.svg'
+            priority
+            layout='responsive'
+            width={100} // tỷ lệ khung hình, ví dụ 100:56
+            height={56} // ví dụ
+            objectFit='cover' // Điều chỉnh cách hình ảnh được cắt
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <Image alt='Banner Image' src='/mega-banner.svg' preview={false} />
+          <Image
+            alt='Banner Image'
+            src='/mega-banner.svg'
+            priority
+            layout='responsive'
+            width={100} // tỷ lệ khung hình, ví dụ 100:56
+            height={56} // ví dụ
+            objectFit='cover' // Điều chỉnh cách hình ảnh được cắt
+          />
         </SwiperSlide>
       </Swiper>
     </div>

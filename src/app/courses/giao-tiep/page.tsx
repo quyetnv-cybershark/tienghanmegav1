@@ -5,6 +5,7 @@ const GiaoTiep = () => {
     imgUrl: '/course-page/giaotiep.svg',
     title: 'Giao Tiếp',
     output: 'Giao tiếp thành thạo các chủ đề cơ bản trong sinh hoạt',
+    hidedot: true,
     overviews: [
       {
         title: 'Tổng quan khóa học',

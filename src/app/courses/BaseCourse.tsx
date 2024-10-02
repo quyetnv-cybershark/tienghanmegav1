@@ -6,6 +6,7 @@ import Link from 'next/link';
 export interface BaseCourseProps {
   imgUrl: string;
   title: string;
+  hidedot?: boolean;
   overviews: {
     title: string;
     overviewsDescs: {
@@ -15,7 +16,7 @@ export interface BaseCourseProps {
   }[];
   output: string;
 }
-const BaseCourse = ({ imgUrl, title, overviews, output }: BaseCourseProps) => {
+const BaseCourse = ({ imgUrl, title, overviews, output, hidedot = false }: BaseCourseProps) => {
   return (
     <Flex style={{ height: 'calc(100vh - 66px)' }} className='bg-background overflow-hidden'>
       <div className='w-[30%] absolute top-0 bottom-0 right-0 left-0'>
@@ -40,7 +41,9 @@ const BaseCourse = ({ imgUrl, title, overviews, output }: BaseCourseProps) => {
                 {item.overviewsDescs.map((overviewsDesc) => {
                   return (
                     <Flex key={overviewsDesc.title} gap={8}>
-                      <GoDotFill className='mt-[3px] text-primaryColor text-lg w-5' />
+                      <div>
+                        <GoDotFill className='mt-[3px] text-primaryColor text-lg w-5' />
+                      </div>
                       <Flex gap={8} className='text-black text-lg'>
                         {overviewsDesc.title ? (
                           <span className='font-bold text-justify'>
@@ -59,7 +62,11 @@ const BaseCourse = ({ imgUrl, title, overviews, output }: BaseCourseProps) => {
 
           <div className='text-[#f19808] font-[900] text-3xl mt-6 mb-2 uppercase'>CHẤT LƯỢNG ĐẦU RA</div>
           <Flex gap={8}>
-            <GoDotFill className='mt-[3px] text-primaryColor text-lg' />
+            {!hidedot && (
+              <div>
+                <GoDotFill className='mt-[3px] text-primaryColor text-lg w-5' />
+              </div>
+            )}
             <div className='text-primaryColor uppercase font-[800] text-2xl'>{output}</div>
           </Flex>
           <div className='absolute top-0 -right-[85%]'>

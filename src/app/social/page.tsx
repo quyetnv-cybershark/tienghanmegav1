@@ -8,19 +8,19 @@ const SocialPage = () => {
     {
       socialName: 'tiktok',
       imgUrl: '/social-page/tiktok.svg',
-      desc: 'Kênh LIVESTREAM chữa đề, học thử vào 14h - 16h hàng ngày',
+      desc: 'Kênh LIVESTREAM chữa đề, luyện phản xạ và học thử vào 15:00 - 16:30 các ngày thứ 3,5,7 hàng tuần',
       openLink: 'https://www.tiktok.com/@tienghanmega',
     },
     {
       socialName: 'facebook',
       imgUrl: '/social-page/facebook.svg',
-      desc: 'Fanpage chia sẻ kiến thức và thông báo sự kiện của Mega',
+      desc: 'Fanpage chia sẻ kiến thức, thông báo sự kiện và hỗ trợ học viên của MEGA',
       openLink: 'https://www.facebook.com/tienghanmega/',
     },
     {
       socialName: 'youtube',
       imgUrl: '/social-page/youtube.svg',
-      desc: 'Kênh tổng hợp kiến thức, các buổi học tại Mega',
+      desc: 'Kênh tổng hợp kiến thức, các buổi luyện thi và hoạt động của MEGA',
       openLink: 'https://www.youtube.com/@tienghanmega',
     },
   ];

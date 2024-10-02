@@ -5,6 +5,7 @@ const TrungCapHai = () => {
     imgUrl: '/course-page/topik2.svg',
     title: 'Topik II cấp độ 3,4,5,6',
     output: 'Tối thiểu Topik 3',
+    hidedot: true,
     overviews: [
       {
         title: 'Tổng quan khóa học',

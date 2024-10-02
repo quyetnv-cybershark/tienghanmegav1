@@ -95,7 +95,7 @@ const FormRegister: React.FC = () => {
             name='target'
             rules={[{ required: true, message: 'Vui lòng nhập mục tiêu của bạn!' }]}
           >
-            <Input className='h-[40px] border-solid border-2 focus:border-red-600 px-2' placeholder='Email' />
+            <Input className='h-[40px] border-solid border-2 focus:border-red-600 px-2' placeholder='Mục tiêu' />
           </Form.Item>
           <Flex className='w-full' justify='center'>
             <Button
@@ -116,6 +116,7 @@ const FormRegister: React.FC = () => {
               width={420}
               height={420}
               className='absolute -top-[136px] -right-[125px]'
+              priority
             />
             <Image
               alt=''
@@ -123,8 +124,9 @@ const FormRegister: React.FC = () => {
               width={320}
               height={320}
               className='absolute -top-[80px] -left-[60px]'
+              priority
             />
-            <Image alt='' src='/imgForm.svg' width={800} height={800} className='scale-125' />
+            <Image alt='' src='/imgForm.svg' width={800} height={800} className='scale-125' priority />
           </div>
         </div>
 
@@ -148,6 +150,7 @@ const FormRegister: React.FC = () => {
             height={240}
             width={240}
             className='absolute -top-[24px] left-[180px]'
+            priority
           ></Image>
           <Flex vertical gap={24} className='max-w-[35%] ml-[20%] mt-[25%] z-20 text-xl text-black font-bold'>
             <Flex vertical className='w-full'>
