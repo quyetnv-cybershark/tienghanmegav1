@@ -1,3 +1,4 @@
+import FallingLeaves from '@/components/FallingLeaves';
 import { Flex } from 'antd';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -26,7 +27,8 @@ const SocialPage = () => {
   ];
   // mt-[5%] mb-16
   return (
-    <Flex vertical align='center' justify='space-evenly' className='w-full h-full mt-[47px] bg-background'>
+    <Flex vertical align='center' justify='space-evenly' className='w-full h-full mt-[42px] bg-background'>
+      <FallingLeaves />
       <div className='title text-primaryColor text-6xl font-[800] uppercase -mt-[100px]'>
         Thực chiến tiếng hàn tại mega
       </div>

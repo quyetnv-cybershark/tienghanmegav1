@@ -103,7 +103,7 @@ const FormRegister: React.FC = () => {
               type='primary'
               htmlType='submit'
             >
-              Đặt lịch ngay
+              Đăng ký ngay
             </Button>
           </Flex>
         </Form>

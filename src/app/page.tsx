@@ -1,4 +1,5 @@
 'use client';
+import FallingLeaves from '@/components/FallingLeaves';
 import { Flex } from 'antd';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -23,6 +24,7 @@ export default function Home() {
         height: 'calc(100vh - 66px)',
       }}
     >
+      <FallingLeaves />
       <div
         style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1 }}
         className='bg-background'

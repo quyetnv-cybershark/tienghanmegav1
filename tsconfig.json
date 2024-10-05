@@ -27,7 +27,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/api/contract.js",
-    "src/pages/api/send-email.js"
+    "src/pages/api/send-email.js",
+    "src/utils/laroi.js"
   ],
   "exclude": ["node_modules"]
 }

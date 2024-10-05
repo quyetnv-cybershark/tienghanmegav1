@@ -1,10 +1,11 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import '../styles/app.scss';
+/* eslint-disable @next/next/no-page-custom-font */
+import { RootStyleRegistry } from '@/app/RootStyleRegistry';
 import Header from '@/components/Header';
 import 'antd/dist/reset.css';
-import { RootStyleRegistry } from '@/app/RootStyleRegistry';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import '../styles/app.scss';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,14 +25,14 @@ export default function RootLayout({
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
-          href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap'
+          href='https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap'
           rel='stylesheet'
         />
       </head>
       <RootStyleRegistry>
         <body className={inter.className + ' relative'}>
           <Header />
-          <div className='mt-[47px]' style={{ height: 'calc(100vh - 66px)' }}>
+          <div className='mt-[42px]' style={{ height: 'calc(100vh - 66px)' }}>
             {children}
           </div>
         </body>

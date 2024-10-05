@@ -122,7 +122,13 @@ const Footer = () => {
   ];
   return (
     <Flex gap={40} className='bg-white w-full px-[5%] text-black py-16'>
-      <Flex gap={40} className='flex-1'>
+      <Flex
+        gap={40}
+        className='flex-1'
+        // style={{
+        //   width: 'calc(100% - 400px)',
+        // }}
+      >
         {listFooter.map((footerItem) => (
           <Flex gap={12} vertical key={footerItem.title} className='w-1/3'>
             <div className='uppercase text-2xl pb-[6px] border-solid border-b-2 border-primaryColor font-[600]'>
@@ -149,7 +155,7 @@ const Footer = () => {
           </Flex>
         ))}
       </Flex>
-      <div className='w-[400px]'>
+      <div className='w-[460px]'>
         <iframe
           src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftienghanmega%2F&tabs=timeline&width=460&height=240&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId'
           width='460'

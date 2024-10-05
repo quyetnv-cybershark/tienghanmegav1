@@ -3,6 +3,7 @@
 import Banner from '@/components/Banner';
 import Courses from '@/components/Courses';
 import FacebookChat from '@/components/FacebookChat';
+import FallingLeaves from '@/components/FallingLeaves';
 import Feedbacks from '@/components/Feedbacks';
 import Footer from '@/components/Footer';
 import FormRegister from '@/components/FormRegister';
@@ -51,36 +52,7 @@ export default function HomePage() {
   }, []);
   return (
     <Flex vertical className='bg-background'>
-      <div>
-        <div className='snowflakes' aria-hidden='true'>
-          <div className='snowflake' style={{ fontSize: '30px' }}>
-            ❅
-          </div>
-          <div className='snowflake'>❅</div>
-          <div className='snowflake' style={{ fontSize: '40px' }}>
-            ❆{' '}
-          </div>
-          <div className='snowflake'>❅</div>
-          <div className='snowflake' style={{ fontSize: '30px' }}>
-            ❆
-          </div>
-          <div className='snowflake' style={{ fontSize: '22px' }}>
-            ❅
-          </div>
-          <div className='snowflake' style={{ fontSize: '50px' }}>
-            ❆
-          </div>
-          <div className='snowflake' style={{ fontSize: '20px' }}>
-            ❅
-          </div>
-          <div className='snowflake' style={{ fontSize: '70px' }}>
-            ❆
-          </div>
-          <div className='snowflake' style={{ fontSize: '20px' }}>
-            ❆
-          </div>
-        </div>
-      </div>
+      <FallingLeaves />
       <div className='mb-10'>
         <Banner />
       </div>

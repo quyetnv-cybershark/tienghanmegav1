@@ -3,7 +3,7 @@ import BaseCourse, { BaseCourseProps } from '@/app/courses/BaseCourse';
 const TrungCapHai = () => {
   const ChuyenSaupageData: BaseCourseProps = {
     imgUrl: '/course-page/topik2.svg',
-    title: 'Topik II cấp độ 3,4,5,6',
+    title: 'Topik II Cấp Độ 3-6',
     output: 'Tối thiểu Topik 3',
     hidedot: true,
     overviews: [

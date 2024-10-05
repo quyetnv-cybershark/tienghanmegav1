@@ -29,8 +29,8 @@ const Header = () => {
         { label: 'Sơ cấp 2', key: '/courses/so-cap-2' },
         { label: 'Trung cấp 3', key: '/courses/trung-cap-3' },
         { label: 'Giao tiếp', key: '/courses/giao-tiep' },
-        { label: 'TOPIK II cấp 3,4,5,6', key: '/courses/topik-2-cap-3-4-5-6' },
-        { label: 'Chuyên sâu 1-1', key: '/courses/chuyen-sau' },
+        { label: 'TOPIK II cấp 3-6', key: '/courses/topik-2-cap-3-6' },
+        { label: 'Chuyên sâu 1:1', key: '/courses/chuyen-sau' },
       ],
     },
     {

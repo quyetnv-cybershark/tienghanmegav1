@@ -4,3 +4,9 @@
 // };
 
 // module.exports = nextConfig;
+
+module.exports = {
+  images: {
+    domains: ['i.pinimg.com'],
+  },
+};

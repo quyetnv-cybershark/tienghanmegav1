@@ -76,11 +76,11 @@ const Teachers = () => {
           },
         }}
         initialSlide={1}
-        pagination={true}
+        pagination={false}
         modules={[Autoplay, EffectCoverflow, Pagination]}
         className='mySwiper'
       >
-        {listTeachers.map((teacher) => (
+        {[...listTeachers, ...listTeachers].map((teacher) => (
           <SwiperSlide key={teacher.teacherImg} className='rounded-lg'>
             <TeacherItem {...teacher} />
           </SwiperSlide>

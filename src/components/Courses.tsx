@@ -26,12 +26,12 @@ export const listCourses = [
     img: '/courses/giaotiep.jpg',
   },
   {
-    title: 'TOPIK II CẤP ĐỘ 3,4,5,6',
+    title: 'TOPIK II CẤP ĐỘ 3-6',
     desc: 'Giúp học viên làm chủ cấu trúc đề thi và các mẹo làm bài hiệu quả, phát triển toàn diện các kỹ năng đọc, nghe, viết.',
     img: '/courses/topik2.svg',
   },
   {
-    title: 'LỚP CHUYÊN SÂU 1-1',
+    title: 'LỚP CHUYÊN SÂU 1:1',
     desc: 'Phù hợp với học viên muốn học theo lộ trình cá nhân riêng biệt, giúp chinh phục mục tiêu đề ra trong thời gian ngắn nhất.',
     img: '/courses/chuyensau11.png',
   },

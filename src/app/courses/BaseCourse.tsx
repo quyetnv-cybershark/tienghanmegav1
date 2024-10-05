@@ -3,6 +3,7 @@ import { Flex } from 'antd';
 import { GoDotFill } from 'react-icons/go';
 import Image from 'next/image';
 import Link from 'next/link';
+import FallingLeaves from '@/components/FallingLeaves';
 export interface BaseCourseProps {
   imgUrl: string;
   title: string;
@@ -19,6 +20,8 @@ export interface BaseCourseProps {
 const BaseCourse = ({ imgUrl, title, overviews, output, hidedot = false }: BaseCourseProps) => {
   return (
     <Flex style={{ height: 'calc(100vh - 66px)' }} className='bg-background overflow-hidden'>
+      {' '}
+      <FallingLeaves />
       <div className='w-[30%] absolute top-0 bottom-0 right-0 left-0'>
         <div
           className='absolute top-0 bottom-0 right-0 left-0 z-50'
@@ -33,7 +36,19 @@ const BaseCourse = ({ imgUrl, title, overviews, output, hidedot = false }: BaseC
       <div className='w-[30%]'></div>
       <Flex vertical justify='flex-start' className='flex-1 ml-20 mt-12 relative overflow-y-scroll overflow-x-hidden'>
         <Flex vertical gap={20} className='content w-4/5 relative h-fit max-w-[60%]'>
-          <div className='title text-primaryColor text-7xl font-[900] open-sans-bold'>{title}</div>
+          <div
+            className='title text-primaryColor text-8xl font-[900] merriweather-sans-bold leading-[124px]'
+            style={
+              title.toLocaleLowerCase() === 'Topik II cấp độ 3-6'.toLocaleLowerCase()
+                ? {
+                    fontSize: '72px',
+                    width: 'max-content',
+                  }
+                : {}
+            }
+          >
+            {title}
+          </div>
           {overviews.map((item) => {
             return (
               <Flex vertical gap={8} key={item.title}>
@@ -67,13 +82,13 @@ const BaseCourse = ({ imgUrl, title, overviews, output, hidedot = false }: BaseC
                 <GoDotFill className='mt-[3px] text-primaryColor text-lg w-5' />
               </div>
             )}
-            <div className='text-primaryColor uppercase font-[800] text-2xl'>{output}</div>
+            <div className='text-primaryColor uppercase font-[800] text-2xl mb-6'>{output}</div>
           </Flex>
           <div className='absolute top-0 -right-[85%]'>
             <Image unoptimized alt='' src='/course-page/ring.png' height={400} width={400}></Image>
           </div>
         </Flex>
-        <div className='absolute -bottom-16 right-8 cursor-pointer'>
+        <div className='absolute -bottom-16 right-8 cursor-pointer zoom-in-zoom-out'>
           <Link href='/home#registerSection' className='blob-btn text-[48px] !rounded-full !font-[800] uppercase'>
             Đăng ký ngay
             <div className='blob-btn__inner'>
