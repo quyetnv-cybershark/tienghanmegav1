@@ -3,10 +3,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 const FallingLeaves = () => {
-  // Hàm để tạo số ngẫu nhiên từ 18 đến 62
   const randomNumber = () => Math.floor(Math.random() * (55 - 18 + 1)) + 18;
 
-  // Sử dụng useState để lưu trữ các giá trị kích thước ngẫu nhiên cho các hình ảnh
   const [sizes] = useState({
     size1: randomNumber(),
     size2: randomNumber(),
@@ -19,26 +17,6 @@ const FallingLeaves = () => {
     size9: randomNumber(),
     size10: randomNumber(),
   });
-
-  // Sử dụng useEffect để cập nhật kích thước mỗi 5 giây
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setSizes({
-  //       size1: randomNumber(),
-  //       size2: randomNumber(),
-  //       size3: randomNumber(),
-  //       size4: randomNumber(),
-  //       size5: randomNumber(),
-  //       size6: randomNumber(),
-  //       size7: randomNumber(),
-  //       size8: randomNumber(),
-  //       size9: randomNumber(),
-  //       size10: randomNumber(),
-  //     });
-  //   }, 5000); // Cập nhật mỗi 5 giây
-
-  //   return () => clearInterval(interval); // Dọn dẹp khi component bị unmount
-  // }, []);
 
   return (
     <div>
