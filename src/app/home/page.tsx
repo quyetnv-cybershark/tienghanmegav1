@@ -2,7 +2,6 @@
 
 import Banner from '@/components/Banner';
 import Courses from '@/components/Courses';
-import Feedbacks from '@/components/Feedbacks';
 import Footer from '@/components/Footer';
 import FormRegister from '@/components/FormRegister';
 import ListAdvantages from '@/components/ListAdvantage';
@@ -10,7 +9,12 @@ import Teachers from '@/components/Teachers';
 import VideoInterview from '@/components/VideoInterview';
 import { openNotification } from '@/utils/openNotification';
 import { Flex } from 'antd';
+import dynamic from 'next/dynamic';
 import { useEffect } from 'react';
+
+const Feedbacks = dynamic(() => import('@/components/Feedbacks'), {
+  ssr: false,
+});
 
 export default function HomePage() {
   useEffect(() => {
