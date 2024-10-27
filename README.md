@@ -60,15 +60,19 @@ bun dev
 
 function doPost(e) {
 // Parse the incoming JSON data
+
 var data = JSON.parse(e.postData.contents);
 
 // Get the current timestamp
+
 var timestamp = new Date().toISOString(); // ISO format for timestamp
 
 // Append the new row to the Google Sheet
 
 // gg sheet id (take it from url)
+
 var sheet = SpreadsheetApp.openById('1JMRL2Hx42JZn4Uh3vfpRxYz549CQRyVDAwEFq2eBE2c').getActiveSheet();
+
 sheet.appendRow([data.name, data.phone, data.email, data.course, data.target]);
 
 return ContentService.createTextOutput('Success').setMimeType(ContentService.MimeType.TEXT);
