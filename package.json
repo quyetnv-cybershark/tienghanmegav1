@@ -10,7 +10,9 @@
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,md}'",
     "commitlint": "commitlint --edit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build-vps": "NODE_OPTIONS='--max-old-space-size=4096' npm run build",
+    "start-vps": "nohup npm run start &"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
