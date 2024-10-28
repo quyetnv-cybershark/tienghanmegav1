@@ -32,13 +32,13 @@ const BaseCourse = ({ imgUrl, title, overviews, output }: BaseCourseProps) => {
       <Flex vertical justify='flex-start' className='flex-1 ml-20 mt-12 relative overflow-y-scroll overflow-x-hidden'>
         <Flex vertical gap={20} className='content w-4/5 relative h-fit max-w-[60%]'>
           <div className='title text-primaryColor text-7xl font-[900]'>{title}</div>
-          {overviews.map((item) => {
+          {overviews.map((item, i) => {
             return (
-              <Flex vertical gap={8} key={item.title}>
+              <Flex vertical gap={8} key={i}>
                 <div className='text-[#f19808] font-[900] text-3xl mt-6 mb-2 uppercase'>{item.title}</div>
-                {item.overviewsDescs.map((overviewsDesc) => {
+                {item.overviewsDescs.map((overviewsDesc, j) => {
                   return (
-                    <Flex key={overviewsDesc.title} gap={8}>
+                    <Flex key={j} gap={8}>
                       <GoDotFill className='mt-[3px] text-primaryColor text-lg w-5' />
                       <Flex gap={8} className='text-black text-lg'>
                         {overviewsDesc.title ? (

@@ -1,38 +1,35 @@
-import { Button, Flex, Form, Input, Select } from 'antd';
+import { Button, Flex, Form, FormProps, Input, Select } from 'antd';
 import Image from 'next/image';
 import React from 'react';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { MdLocationPin } from 'react-icons/md';
 
-// type FieldType = {
-//   name?: string;
-//   email?: string;
-// };
+export type FormValuesProps = {
+  name: string;
+  phone: string;
+  email: string;
+  course: string;
+  target: string;
+};
 
-// const handleSubmit = async (formData: any) => {
-//   const response = await fetch('/api/send-email', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(formData),
-//   });
-//   console.log('response :>> ', response);
-//   if (response.ok) {
-//     alert('Contract form sent successfully!');
-//   } else {
-//     alert('Failed to send contract form.');
-//   }
-// };
+const handleSubmit = async (formData: FormValuesProps) => {
+  await fetch('/api/consultant', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  });
+};
 
-// const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
-//   console.log('Success:', values);
-//   handleSubmit(values);
-// };
+const onFinish: FormProps<FormValuesProps>['onFinish'] = (values) => {
+  console.log('Success:', values);
+  handleSubmit(values);
+};
 
-// const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = (errorInfo) => {
-//   console.log('Failed:', errorInfo);
-// };
+const onFinishFailed: FormProps<FormValuesProps>['onFinishFailed'] = (errorInfo) => {
+  console.log('Failed:', errorInfo);
+};
 
 const FormRegister: React.FC = () => {
   return (
@@ -65,8 +62,8 @@ const FormRegister: React.FC = () => {
           wrapperCol={{ span: 16 }}
           style={{ maxWidth: 600 }}
           initialValues={{ remember: true }}
-          // onFinish={onFinish}
-          // onFinishFailed={onFinishFailed}
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
           autoComplete='off'
         >
           <Form.Item

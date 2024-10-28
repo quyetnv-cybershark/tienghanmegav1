@@ -1,6 +1,8 @@
 import { Flex } from 'antd';
+import dynamic from 'next/dynamic';
 import React from 'react';
-import ReactPlayer from 'react-player';
+
+const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 
 const VideoInterview: React.FC = () => {
   // useEffect(() => {
